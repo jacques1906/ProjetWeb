@@ -1,0 +1,54 @@
+.log_title{
+    text-align: center;
+    
+}
+
+.log_box{
+    font-size: .625em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+input[type=text], input[type=password],input[type=email] {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+.submit_button{
+    align-items: center;
+    border-radius: 22.5px;
+    justify-content: center;
+    display: flex;
+}
+.log_footer,.lien_mdp{
+    display: flex;
+    cursor: pointer;
+}
+.lien_mdp{
+    text-align:right;
+    text-decoration: underline;
+}
+.dessous_mdp{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container_footer{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.profil{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.profile-form-row-field{
+    width: calc(50% - 19px);
+    margin-bottom: 10px;
+}

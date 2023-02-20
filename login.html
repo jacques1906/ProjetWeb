@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <link rel="stylesheet" href="site.css">
         <title>
             Connexion
         </title>
@@ -10,23 +11,29 @@
             <div class="log_box_header">
                 <h1 class="log_title"> connexion </h1>
                 <div class="log_box_content">
-                    <label for="username">
+                    <label class="username">
                         <b>Username</b>
                     </label>
                     <input type="text" placeholder="Enter Username" name="uname" required>
-                    <label for="psw">
+                    <label class="psw">
                         <b>Password</b>
                     </label>
                     <input type="password" placeholder="Enter Password" name="psw" required>
-                    <button type="submit">Login</button>
-                    <label>
-                      <input type="checkbox" checked="checked" name="remember"> Remember me
-                    </label>
-                    <div class="log_footer">
-                        <A href="mdp_oublier.html">mots de passe oublier</A>
-                        <A href="Inscription.html">crée un compte</A>
+                    <div class = "dessous_mdp">
+                        <label class="btn_sv">
+                            <input type="checkbox" checked="checked" name="remember"> Rester connecté·e 
+                        </label>
+                          <A  class="lien_mdp"href="mdp_oublier.html">mot de passe oublié</A>
                     </div>
-
+                    <button class="submit_button"type="submit">Login</button>
+                    <div class="container_footer">
+                        <div class="container_footer_title">
+                            <span>Vous n'avez pas de compte?</span>
+                        </div>
+                        <div class="container_footer_link">
+                            <A href="Inscription.html">crée un compte</A>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
