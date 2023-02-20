@@ -52,3 +52,11 @@ input[type=text], input[type=password],input[type=email] {
     width: calc(50% - 19px);
     margin-bottom: 10px;
 }
+
+
+
+
+.numpage{
+    display: flex;
+    justify-content: space-between;
+}

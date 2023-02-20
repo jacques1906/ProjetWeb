@@ -2,14 +2,16 @@
 <html lang="fr">
     <head>
         <title>nom du site</title>
-        <meta name="viewport" content="witdh=device-witdh" initial-scale="1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="site.css">
+        <script src="inscription.js"></script>
         <title>connexion</title>
-    </head>
+    </head> 
     <body>
+        <h1 class="ins_title">Inscription</h1>
         <div class="ins_box">
-            <div class="ins_box_header">
-                <H1 class="ins_title"> Inscription</H1>
+            <div class="page" id="page1">
+                <h1 class="numpage"></h1>
                 <div class="ins_box_content">
                     <div class="profil">
                         <div class="profile-form-row-field">
@@ -19,45 +21,77 @@
                             <input type="text" placeholder="nom" name="nom" required>
                         </div>
                         <div class="profile-form-row-field">
-                        <label for="prenom">
-                            <B>prénom</B>
-                        </label>
-                        <input type="text" placeholder="prenom" name="prenom" required>
-                    </div>
+                            <label for="prenom">
+                                <b>Prénom</b>
+                            </label>
+                            <input type="text" placeholder="prenom" name="prenom" required>
+                        </div>
                     </div>
 
                     <div class="profil">
                         <div class="profile-form-row-field">
-                        <label for="psw">
-                            <b>Mot de passe</b>
+                            <label for="psw">
+                                <b>Mot de passe</b>
+                            </label>
                             <input type="password" placeholder="mot de passe" name="psw" required>
-                        </label>
-                    </div>
-                    <div class="profile-form-row-field">
-                        <label for="psw">
-                            <b>Confirmer le Mot de passe</b>
-                            <input type="password" placeholder="mot de passe" name="psw" required>
-                        </label>
-                    </div>
+                        </div>
+                        <div class="profile-form-row-field">
+                            <label for="psw-confirm">
+                                <b>Confirmer le Mot de passe</b>
+                            </label>
+                            <input type="password" placeholder="mot de passe" name="psw-confirm" required>
+                        </div>
                     </div>
                     <div class="profil">
                         <div class="profile-form-row-field">
-                        <label for="adresse mail">
-                            <b>Adresse Mail</b>
-                        </label>
-                        <input type="email" placeholder="adresseMail" name="adresseMail" required>
-                    </div>
-                    <div class="profile-form-row-field">
-                        <label for="localisation">
-                            <b>localisation</b>
+                            <label for="adresse-mail">
+                                <b>Adresse Mail</b>
+                            </label>
+                            <input type="email" placeholder="adresseMail" name="adresse-mail" required>
+                        </div>
+                        <div class="profile-form-row-field">
+                            <label for="localisation">
+                                <b>Localisation</b>
+                            </label>
                             <input type="text" placeholder="ville" name="localiser" required>
-                        </label>
+                        </div>
                     </div>
-                    </div>
-                    <button class="submit_button" type="submit">Inscription</button>
+                    <button class="submit_button" type="submit">suivant</button>
                 </div>
             </div> 
+                <div class="page" id="page2">
+                    <H1 class="ins_title" > complément information</H1> 
+                    <div class="ins_box_content">
+                        <div class="profil">
+                            <div class="profile-form-row-field">
+                                <label for="anne_etude">
+                                    <b>Anné d'étude</b>
+                                </label>
+                                <input type="text" placeholder="anne_etude" name="anne_etude" required>
+                            </div>
+                            <div class="profile-form-row-field">
+                                <label for="diplome">
+                                    <B>diplome</B>
+                                </label>
+                                <input type="text" placeholder="diplome" name="diplome" required>
+                            </div>
 
+                            <div class="profil">
+                                <div class="profile-form-row-field">
+                                <label for="cv">
+                                    <b>CV</b>
+                                    <input type="password" placeholder="mot de passe" name="psw" required>
+                                </label>
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+                </div> 
         </div>
     </body>
 </html>
+
+
+
+
+
