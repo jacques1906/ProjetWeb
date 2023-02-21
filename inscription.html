@@ -8,9 +8,10 @@
         <title>connexion</title>
     </head> 
     <body>
-        <h1 class="ins_title">Inscription</h1>
+
         <div class="ins_box">
             <div class="page" id="page1">
+                <h1 class="ins_title">Inscription</h1>
                 <h1 class="numpage"></h1>
                 <div class="ins_box_content">
                     <div class="profil">
@@ -56,7 +57,7 @@
                             <input type="text" placeholder="ville" name="localiser" required>
                         </div>
                     </div>
-                    <button class="submit_button" type="submit">suivant</button>
+                    <button class="next" type="button">Suivant</button>
                 </div>
             </div> 
                 <div class="page" id="page2">
@@ -75,16 +76,17 @@
                                 </label>
                                 <input type="text" placeholder="diplome" name="diplome" required>
                             </div>
-
                             <div class="profil">
                                 <div class="profile-form-row-field">
                                 <label for="cv">
                                     <b>CV</b>
-                                    <input type="password" placeholder="mot de passe" name="psw" required>
-                                </label>
+                                    <input type="file" id="cv" name="cv" accept="image/png, image/jpeg, application/pdf">
+                                    <div id="file-preview"></div>                                </label>
                                 </div>
                             </div>
                         </div> 
+                        <button class="prev" type="button">Précédent</button>
+                        <button class="terminer" type="submit">terminer</button>
                     </div> 
                 </div> 
         </div>

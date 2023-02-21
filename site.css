@@ -54,9 +54,19 @@ input[type=text], input[type=password],input[type=email] {
 }
 
 
-
+.page{
+    display:none;
+}
 
 .numpage{
     display: flex;
     justify-content: space-between;
 }
+
+
+#file-preview {
+    max-width: 500px;
+    max-height: 500px;
+    margin-top: 20px;
+  }
+  
