@@ -1,72 +1,79 @@
-.log_title{
-    text-align: center;
-    
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #F5F5DC, #ffff);
+}
+.container{
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+cv:not(.container) .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
 }
 
-.log_box{
-    font-size: .625em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-  
-input[type=text], input[type=password],input[type=email] {
-    width: 100%;
-    padding: 6px 10px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
 
-.submit_button{
-    align-items: center;
-    border-radius: 22.5px;
-    justify-content: center;
-    display: flex;
-}
-.log_footer,.lien_mdp{
-    display: flex;
-    cursor: pointer;
-}
-.lien_mdp{
-    text-align:right;
-    text-decoration: underline;
-}
-.dessous_mdp{
-    display: flex;
-    justify-content: space-between;
-}
-
-.container_footer{
-    text-align: center;
-    margin-top: 40px;
-}
-
-.profil{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.ins_box form .profil{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
 }
 .profile-form-row-field{
-    width: calc(50% - 19px);
-    margin-bottom: 10px;
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+
+form .profile-form-row-field  span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.profile-form-row-field input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.next{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 50%;
+    border-radius: 5px;
+}
+
+.prev .terminer{
+    display: flex;
+    height: 50%;
+    width: 50%;
+    border-radius: 5px;
 }
 
 
 .page{
-    display:none ;
+    display: none;
 }
-
-.numpage{
-    display: flex;
-    justify-content: space-between;
-}
-
-
-#file-preview {
-    max-width: 500px;
-    max-height: 500px;
-    margin-top: 20px;
-  }
-  
