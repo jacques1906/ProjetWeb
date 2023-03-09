@@ -1,105 +1,119 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
+<html>
+    <head lang="fr" >
         <title>nom du site</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="site.css">
         <script src="inscription.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="inscription.css">
+
         <title>connexion</title>
     </head> 
     <body>
-        <div class="ins_box">
-            <div class="page" id="page1">
-                <div class="container">
-                    <div class="title">Inscription</div>
-                    <div class="content">
-                        <form action="#">
-                            <div class="ins_box_content">
-                                <div class="profil">
-                                    <div class="profile-form-row-field">
-                                        <label for="details">
-                                            <b>Nom</b>
-                                        </label>
-                                        <input type="text" placeholder="nom" name="nom" required>
-                                    </div>
-                                    <div class="profile-form-row-field">
-                                        <label for="details">
-                                            <b>Prénom</b>
-                                        </label>
-                                        <input type="text" placeholder="prenom" name="prenom" required>
-                                    </div>
-                                </div>
-                                <div class="profil">
-                                    <div class="profile-form-row-field">
-                                        <label for="details">
-                                            <b>Mot de passe</b>
-                                        </label>
-                                        <input type="password" placeholder="mot de passe" name="psw" required>
-                                    </div>
-                                    <div class="profile-form-row-field">
-                                        <label for="details">
-                                            <b>Confirmer le Mot de passe</b>
-                                        </label>
-                                        <input type="password" placeholder="mot de passe" name="psw-confirm" required>
-                                    </div>
-                                </div>
-                                <div class="profil">
-                                    <div class="profile-form-row-field">
-                                        <label for="details">
-                                            <b>Adresse Mail</b>
-                                        </label>
-                                        <input type="email" placeholder="adresseMail" name="adresse-mail" required>
-                                    </div>
-                                    <div class="profile-form-row-field">
-                                        <label for="details">
-                                            <b>numéro</b>
-                                        </label>
-                                        <input type="tel" placeholder="numéro" name="numéro" required>
-                                    </div>
-                                </div>
-                                <button class="next" type="button">Suivant</button>
-                            </div>
-                        </div> 
-                    </form> 
-                </div> 
-            </div>     
-        <div class="page" id="page2">
         <div class="container">
-            <H1 class="ins_title" > complément information</H1> 
-            <div class="ins_box_content">
-                <div class="profil">
-                    <div class="profile-form-row-field">
-                        <label for="anne_etude">
-                            <b>Anné d'étude</b>
-                        </label>
-                        <input type="text" placeholder="anne_etude" name="anne_etude" required>
-                    </div>
-                    <div class="profile-form-row-field">
-                        <label for="diplome">
-                            <B>diplome</B>
-                        </label>
-                        <input type="text" placeholder="diplome" name="diplome" required>
-                    </div>
-                </div> 
-                 <div class="profil">
-                    <div class="cv">
-                        <label for="cv">
-                            <b>CV</b>
-                            <input type="file" id="cv" name="cv" accept="image/png, image/jpeg, application/pdf">
-                            <div id="file-preview"></div>                                
-                        </label>
-                    </div>
-                </div>
-                <button class="prev" type="button">Précédent</button>
-                <button class="terminer" type="submit">terminer</button>
-            </div> 
+            <div class="card">
+                <div class="title">Inscription</div>
+                                <ul class="steps">
+                                  <li class="li-active"></li>
+                                  <li></li>
+                                </ul>
+                            <div class="main active"> 
+                                <div class="input-text">
+                                    <label for="details">
+                                        <b>Nom</b>
+                                    </label>
+                                    <input type="text" placeholder="nom"  id="user_name" require>
+                                    
+                                </div>
+                                <div class="input-text">
+                                    <label for="details">
+                                        <b>Prénom</b>
+                                    </label>
+                                    <input type="text" placeholder="prénom"  id="user_name" require>
+                                    
+                                </div>
+                                <div class="input-text">
+                                    <label for="details">
+                                        <b>Mot de passe</b>
+                                    </label>
+                                    <input type="password" placeholder="mot de passe" id="password" require>
+                                    
+                                </div>
+                                <div class="input-text">
+                                    <label for="details">
+                                        <b>Confirmer le Mot de passe</b>
+                                    </label>
+                                    <input type="password" placeholder="Confirmer mot de passe" id="confirmPassword"  require>
+                                    
+                                    <span id='invalideMDP'></span>
+
+                                </div>
+
+                                <div class="input-text">
+                                    <label for="details">
+                                        <b>Adresse Mail</b>
+                                    </label>
+                                    <input type="mail" placeholder="adresse Mail" id="adressemail" require>
+                                    
+                                    <span id='invalideMail'></span>
+
+                                </div>
+
+                                <div class="input-text">
+                                    <label for="details">
+                                        <b>Telephone</b>
+                                    </label>
+                                    <input type="tel" placeholder="numéro telephone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" require>
+                                </div>
+                                    <span id='invalideTel'></span>
+                                    
+                                <div class="buttons" >
+                                    <button class="next_button">Suivant</button>
+                                </div>
+                            </div>
+
+                        
+                            <div class="main ">
+                                <div class="top-div">
+                                    <p></p>
+                                </div>
+                                <div class="input-text">
+                                    <label for="details">
+                                        <b>code postal</b>
+                                    </label>
+                                    <input type="text" placeholder="code postal" id="zipcode" require>
+                                </div>
+
+                                <div class="input-text">
+                                    <label for="details">
+                                        <b>ville</b>
+                                    </label>
+                                    <input type="text" placeholder="ville" id="city" require>
+                                </div>
+
+
+                                <div class="buttons final_button">
+                                    <button class="previous_button">Précédent</button>
+                                    <button class="submit_button">Soumetre</button>
+                                </div>
+                            </div>
+                            <div class="main"> 
+                                <div class="top-div">
+                                    <h2>Succes </h2>
+                                </div>
+                                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                                </svg>
+                                <div class="check_box">
+                                    <p> <span id="shown_name"></span> vous avez bien été  enregistrer .</p>
+                                </div>
+                            </div>
+                        </div>   
+                        </div>
+                    </div> 
+            </div>
         </div>
-        </div>
-    </body>
+    </body>      
 </html>
-
-
-
-
-
