@@ -135,7 +135,7 @@ $('#password, #confirmPassword').on('keyup', function () {
 });
 
 
-$('#adressemail').on('blur', function() {
+$('#adressemail').on('keyup', function() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (emailRegex.test($('#adressemail').val())) {
         $('#invalideMail').html('Adresse e-mail valide').css('color', 'green');
