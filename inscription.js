@@ -126,10 +126,10 @@ $('#password, #confirmPassword').on('keyup', function () {
       $('#invalideMDP').html('Matching').css('color', 'green');
       return verifyMDP = 1;
     } else if (password.length < 8) {
-      $('#invalideMDP').html('Password is too short (minimum 8 characters)').css('color', 'red');
+      $('#invalideMDP').html('mot de passe trop court (minimum 8 caratères )').css('color', 'red');
       return verifyMDP = 0;
     } else {
-      $('#invalideMDP').html('Passwords do not match').css('color', 'red');
+      $('#invalideMDP').html('le mot de passe ne corresponds').css('color', 'red');
       return verifyMDP = 0;
     }
 });

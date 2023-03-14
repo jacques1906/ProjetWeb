@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="virtual-select.css">
+    <link rel="stylesheet" href="inscription.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="title">Inscription tuteur</div>
+            <div class="main active"> 
+                <div class="input-text">
+                    <label for="details">
+                        <b>choisir le campus</b>
+                    </label>
+                    <select name="campus" placeholder="veilliez choisir un campus"id="multi_option" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+                        <option value="" selected disabled hidden></option>
+                        <option value="Aix-en-Provence">Aix-en-Provence CESI</option>
+                        <option value="Arras">Arras CESI</option>
+                        <option value="Bordeaux">Bordeaux CESI</option>
+                        <option value="Brest">Brest CESI</option>
+                        <option value="Caen">Caen CESI</option>
+                        <option value="Châteauroux">Châteauroux CESI</option>
+                        <option value="Dijon">Dijon CESI</option>
+                        <option value="Grenoble">Grenoble CESI</option>
+                        <option value="La Rochelle">La Rochelle CESI</option>
+                        <option value="Le Mans">Le Mans CESI</option>
+                        <option value="Lens">Lens CESI</option>
+                        <option value="Lille">Lille CESI</option>
+                        <option value="Limoges">Limoges CESI</option>
+                        <option value="Lyon">Lyon CESI</option>
+                        <option value="Montpellier">Montpellier CESI</option>
+                        <option value="Nancy">Nancy CESI</option>
+                        <option value="Nanterre">Nanterre CESI</option>
+                        <option value="Angoulême">Angoulême CESI</option>
+                        <option value="Orléans">Orléans CESI</option>
+                        <option value="Nice">Nice CESI</option>
+                        <option value="Reims">Reims CESI</option>
+                        <option value="Pau">Pau CESI</option>
+                        <option value="Saint-Nazaire">Saint-Nazaire CESI</option>
+                        <option value="Saint-Quentin-en-Yvelines">Saint-Quentin-en-Yvelines CESI</option>
+                        <option value="Rouen">Rouen CESI</option>
+                        <option value="Toulouse">Toulouse CESI</option>
+                        <option value="Strasbourg">Strasbourg CESI</option>
+                        <option value="Vannes">Vannes CESI</option>
+                        <option value="Tours">Tours CESI</option>         
+                    </select>
+                </div>
+                <label for="details">
+                    <b>choisir la formation </b>
+                </label>
+                <select name="formation" id="multi_option" class="multiplepicker" placeholder="selectionner"  multiple data-silent-initial-value-set="false" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+                    <option value="A2_info">A2 informatique</option>
+                    <option value="A3_info_fise">A3 informatique Fise</option>
+                    <option value="A3_info_fisa">A3 informatique Fisa</option>
+                    <option value="A3_BTP_fisa">A3 BTP fisa</option>
+                </select>
+            </div>
+            <div class="input-text">
+                <label for="details">
+                    <b>Adresse Mail</b>
+                </label>
+                <input type="mail" placeholder="adresse Mail" id="AdresseMail_tuteur" require>
+            </div>
+
+            <div class="buttons final_button">
+                <button class="submit_button">Soumetre</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+
+
+<script type="text/javascript" src="virtual-select.js"></script>
+<script type="text/javascript">
+	VirtualSelect.init({ 
+	  ele: '#multi_option' 
+	});
+</script>
+
+
