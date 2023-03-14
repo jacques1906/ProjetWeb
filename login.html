@@ -1,42 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <link rel="stylesheet" href="site.css">
-        <title>
-            Connexion
-        </title>
+        <title>nom du site</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="inscription.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="inscription.css">
     </head>
     <body>
-        <div class="log_box">
-            <div class="log_box_header">
-                <h1 class="log_title"> connexion </h1>
-                <div class="log_box_content">
-                    <label class="username">
-                        <b>Username</b>
-                    </label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
-                    <label class="psw">
-                        <b>Password</b>
-                    </label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-                    <div class = "dessous_mdp">
-                        <label class="btn_sv">
-                            <input type="checkbox" checked="checked" name="remember"> Rester connecté(e) 
-                        </label>
-                          <A  class="lien_mdp"href="mdp_oublier.html">mot de passe oublié</A>
-                    </div>
-                    <button class="submit_button"type="submit">Login</button>
-                    <div class="container_footer">
-                        <div class="container_footer_title">
-                            <span>Vous n'avez pas de compte?</span>
+        <div class="container">
+            <form id="login" action="process_log.php" method="post">
+                <div class="card">
+                    <div class="title">Inscription</div>
+                        <div class="main active"> 
+                            <div class="input-text">
+                            <label for="details"><b>Adresse mail</b> </label>
+                            <input type="text" placeholder="Adresse mail"  id="adressemail" name="adressemail" required>
+                            </div>
+                            
+                            <div class="input-text">
+                                <label for="details"><b>Mot de passe</b> </label>
+                                <input type="password" placeholder="Mot de passe"  id="Mot de passe" name="Mot de passe" required>
+                            </div>
                         </div>
-                        <div class="container_footer_link">
-                            <A href="Inscription.html">crée un compte</A>
-                        </div>
-                    </div>
-                    </div>
+                        <A  class="lien_mdp"href="mdp_oublier.html">mot de passe oublié</A>
+                        <button class="btn_log" type="button">Je me connecte</button>
                 </div>
+            </form>
+
+        <div class="container_footer">
+            <div class="container_footer_title">
+                <span>Vous n'avez pas de compte?</span>
             </div>
-        </div>
+            <div class="container_footer_link">
+                <A href="Inscription.html">crée un compte</A>
+            </div>
+        </div>      
     </body>
 </html>

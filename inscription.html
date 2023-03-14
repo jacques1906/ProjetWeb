@@ -5,13 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="inscription.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <link rel="stylesheet" href="inscription.css">
-
-        <title>connexion</title>
-    </head> 
+        </head> 
     <body>
         <div class="container">
+            <form id="myForm" action="Process_Insciption.php" method="post">
             <div class="card">
                 <div class="title">Inscription</div>
                                 <ul class="steps">
@@ -19,32 +17,32 @@
                                   <li></li>
                                 </ul>
                             <div class="main active"> 
-                                <div class="input-text">
+                                    <div class="input-text">
                                     <label for="details">
                                         <b>Nom</b>
                                     </label>
-                                    <input type="text" placeholder="nom"  id="user_name" require>
+                                    <input type="text" placeholder="nom"  id="nom" name="nom" required>
                                     
                                 </div>
                                 <div class="input-text">
                                     <label for="details">
                                         <b>Prénom</b>
                                     </label>
-                                    <input type="text" placeholder="prénom"  id="user_name" require>
+                                    <input type="text" placeholder="prénom"  id="prenom"  name="prenom" required>
                                     
                                 </div>
                                 <div class="input-text">
                                     <label for="details">
                                         <b>Mot de passe</b>
                                     </label>
-                                    <input type="password" placeholder="mot de passe" id="password" require>
+                                    <input type="password" placeholder="mot de passe" id="password"  name="password" required>
                                     
                                 </div>
                                 <div class="input-text">
                                     <label for="details">
                                         <b>Confirmer le Mot de passe</b>
                                     </label>
-                                    <input type="password" placeholder="Confirmer mot de passe" id="confirmPassword"  require>
+                                    <input type="password" placeholder="Confirmer mot de passe" id="confirmPassword"  name="confirmPassword" required>
                                     
                                     <span id='invalideMDP'></span>
 
@@ -54,7 +52,7 @@
                                     <label for="details">
                                         <b>Adresse Mail</b>
                                     </label>
-                                    <input type="mail" placeholder="adresse Mail" id="adressemail" require>
+                                    <input type="mail" placeholder="adresse Mail" id="adressemail"  name="adressemail" required>
                                     <span id='invalideMail'></span>
                                 </div>
 
@@ -62,17 +60,15 @@
                                     <label for="details">
                                         <b>Telephone</b>
                                     </label>
-                                    <input type="tel" placeholder="numéro telephone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" require>
+                                    <input type="tel" placeholder="numéro telephone" id="phone" required>
                                 </div>
                                     <span id='invalideTel'></span>
                                     
                                 <div class="buttons" >
-                                    <button class="next_button">Suivant</button>
+                                    <button class="next_button" type="button">Suivant</button>
                                 </div>
                             </div>
-
-                        
-                            <div class="main ">
+                                <div class="main ">
                                 <div class="top-div">
                                     <p></p>
                                 </div>
@@ -80,23 +76,23 @@
                                     <label for="details">
                                         <b>code postal</b>
                                     </label>
-                                    <input type="text" placeholder="code postal" id="zipcode" require>
+                                    <input type="text" placeholder="code postal" id="zipcode" name="codepostal" required>
                                 </div>
 
+                                
                                 <div class="input-text">
                                     <label for="details">
                                         <b>ville</b>
                                     </label>
-                                    <input type="text" placeholder="ville" id="city" require>
+                                    <input type="text" placeholder="ville" id="city" name="ville" required>
                                 </div>
-
-
+            
                                 <div class="buttons final_button">
                                     <button class="previous_button">Précédent</button>
                                     <button class="submit_button">Soumetre</button>
                                 </div>
-                            </div>
-                            <div class="main"> 
+                            </div>            
+                                <div class="main"> 
                                 <div class="top-div">
                                     <h2>Succes </h2>
                                 </div>
@@ -108,8 +104,9 @@
                                     <p> <span id="shown_name"></span> vous avez bien été  enregistrer .</p>
                                 </div>
                             </div>
-                        </div>   
-                        </div>
+                        </div>  
+                    </form> 
+                    </div>
                     </div> 
             </div>
         </div>

@@ -11,8 +11,7 @@ var steps = document.querySelector(".steps");
 var vide = document.querySelector(".vide");
 let forumnumber=0;
 
-
-
+ 
 const apiUrl = 'https://geo.api.gouv.fr/communes?codePostal=';
 const format = '&format=json';
 let zipcode = $('#zipcode'); 
@@ -58,19 +57,7 @@ prev_btn.forEach(function(prev_button){
     });
 }); 
 
-submit_btn.forEach(function(submit_button){
-    submit_button.addEventListener('click',function(){
-        if(!validateform()){
-            return false;
-        }
-    var f_name=document.querySelector("#user_name");
-    var shown_name = document.querySelector("#shown_name");
-    shown_name.innerHTML=f_name.value;
-        forumnumber++;
-        update_form();
-        steps.classList.add("d-none");
-    });
-});
+
 
 
  function progress(state){ 
@@ -104,7 +91,7 @@ var validate_inputs = document.querySelectorAll(".main.active input");
 
 validate_inputs.forEach(function(input_valid){
     input_valid.classList.remove('warning'); 
-    if(input_valid.hasAttribute('require')){ 
+    if(input_valid.hasAttribute('required')){ 
         if(input_valid.value.length==0 ){
             validate=false;
             input_valid.classList.add('warning');
@@ -147,6 +134,7 @@ $('#adressemail').on('keyup', function() {
 });
 
 
+
 $('#phone').on('blur', function() {
     const phoneRegex = /^((\+)33|0)[1-9](\d{2}){4}$/;
     if (phoneRegex.test($('#phone').val())) {
@@ -159,6 +147,46 @@ $('#phone').on('blur', function() {
 });
 
 
+submit_btn.forEach(function(submit_btn){
+    console.log("1")
+    submit_btn.addEventListener('click',function(event){
+        event.preventDefault(); // empêcher la soumission du formulaire
+        if(!validateform()){
+            return false;
+            console.log("2")
 
+        }
+        
+        var f_name=document.querySelector("#nom");
+        var shown_name = document.querySelector("#shown_name");
+        shown_name.innerHTML=f_name.value;
+        forumnumber++;
+        update_form();
+        steps.classList.add("d-none");
+
+        $.ajax({
+            url: 'Process_Insciption.php',
+            method: 'POST',
+            data: $('form').serialize(),
+            dataType: 'json', // Indique le format de la réponse attendue
+            success: function(response) {
+              console.log(response.message); // Affiche le message de la réponse
+            },
+            error: function() {
+              console.log("Erreur lors de la transmission des données !");
+            }
+          });
+             console.log("4");
+        });
+
+    });
 
 });
+
+
+
+
+
+
+
+

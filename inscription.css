@@ -309,6 +309,13 @@ select{
     
 }
 
+.lien_mdp{
+    display: flex;
+    text-align:right;
+    cursor: pointer;
+    text-decoration: underline;
+    border: none;
+}
 
 .steps{
     width:100%;
